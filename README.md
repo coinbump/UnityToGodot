@@ -14,6 +14,8 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `void FixedUpdate()` using `Time.fixedDeltaTime` for time step |  `public override void _PhysicsProcess(double delta)` using `delta` parameter for time step |  |
 | `.zero`  | `.Zero`  |  |
 | `[Range(0, 20)]`  | `[Export(PropertyHint.Range, "0,20,")]`  |  |
+| `radians = degrees * Mathf.Deg2Rad`  | `radians = Mathf.DegToRad(degrees)`  |  |
+| `degrees = radians * Mathf.Rad2Deg`  | `degrees = Mathf.RadToDeg(radians)`  |  |
 | `.x`  | `.X`  |  |
 | `.y`  | `.Y`  |  |
 | `.z`  | `.Z`  |  |
