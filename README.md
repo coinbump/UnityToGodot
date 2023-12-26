@@ -7,7 +7,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | ------------- | ------------- | ----- |
 | `.meta` files   | Remove all `.meta` files.  | On MacOS, search for .meta and delete. _TODO: create a script for this_  |
 | `[SerializeField]`  | `[Export]`  |  |
-| Auto serialized public properties | `[Export]`  | Unity auto-synthesizes public vars. Godot does not. Add [Export] to vars you want to serialize. |
+| Auto serialized public properties | `[Export]`  | Unity auto-synthesizes public fields. Godot does not. Add [Export] to fields you want to serialize. |
 | `void Awake()`  |  `public override void _Ready()` | Unity calls `Awake` with random order. Godot calls `_Ready` in order from child to parent to root. |
 | `void Start()`  |  No exact equivalent |  Requires custom solution  |
 | `void Update()` using `Time.deltaTime` for time step |  `public override void _Process(double delta)` using `delta` parameter for time step |  |
