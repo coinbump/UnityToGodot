@@ -16,9 +16,12 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `[Range(0, 20)]`  | `[Export(PropertyHint.Range, "0,20,")]`  |  |
 | `radians = degrees * Mathf.Deg2Rad`  | `radians = Mathf.DegToRad(degrees)`  |  |
 | `degrees = radians * Mathf.Rad2Deg`  | `degrees = Mathf.RadToDeg(radians)`  |  |
-| `.x`  | `.X`  |  |
-| `.y`  | `.Y`  |  |
-| `.z`  | `.Z`  |  |
+| `.x`  | `.X`  | All vector types |
+| `.y`  | `.Y`  | All vector types |
+| `.z`  | `.Z`  | All vector types |
+| `.up`  | `.Up`  | All vector types |
+| `.down`  | `.Down`  | All vector types |
+| `.forward`  | `.Forward`  | Vector3 |
 | `.normalized`  | `.Normalized`  |  |
 | `GameObject`  | `Node`  |  |
 | `Vector2Int`  | `Vector2I`  |  |
