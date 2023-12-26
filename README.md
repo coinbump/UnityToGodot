@@ -11,6 +11,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `void Awake()`  |  `public override void _Ready()` | Unity calls `Awake` with random order. Godot calls `_Ready` in order from child to parent to root. |
 | `void Start()`  |  No exact equivalent |  Requires custom solution  |
 | `void Update()` using `Time.deltaTime` for time step |  `public override void _Process(double delta)` using `delta` parameter for time step |  |
+| `void FixedUpdate()` using `Time.fixedDeltaTime` for time step |  `public override void _PhysicsProcess(double delta)` using `delta` parameter for time step |  |
 | `.zero`  | `.Zero`  |  |
 | `.x`  | `.X`  |  |
 | `.y`  | `.Y`  |  |
