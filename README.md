@@ -21,9 +21,9 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `Random.value`  | `GD.Randf()`  | Generate random float between 0-1.0f (inclusive) |
 | `.x`  | `.X`  | All vector types |
 | `.y`  | `.Y`  | All vector types |
-| `.z`  | `.Z`  | All vector types |
 | `.up`  | `.Up`  | All vector types |
 | `.down`  | `.Down`  | All vector types |
+| `.z`  | `.Z`  | Vector3 |
 | `.forward`  | `.Forward`  | Vector3 |
 | `.normalized`  | `.Normalized`  |  |
 | `GameObject`  | `Node`  |  |
