@@ -17,7 +17,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `radians = degrees * Mathf.Deg2Rad`  | `radians = Mathf.DegToRad(degrees)`  |  |
 | `degrees = radians * Mathf.Rad2Deg`  | `degrees = Mathf.RadToDeg(radians)`  |  |
 | `Random.Range(min, max)`  | `GD.Randi() % valueRangeSize + minValue`  | Generate random integer |
-| `Random.InitState(seed)`  | `GD.Seed((uint)seed)`  | Initialize random number generator seed |
+| `Random.InitState(seed)`  | `GD.Seed(seed)`  | Initialize random number generator seed |
 | `.x`  | `.X`  | All vector types |
 | `.y`  | `.Y`  | All vector types |
 | `.z`  | `.Z`  | All vector types |
