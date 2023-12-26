@@ -13,6 +13,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `void Update()` using `Time.deltaTime` for time step |  `public override void _Process(double delta)` using `delta` parameter for time step |  |
 | `void FixedUpdate()` using `Time.fixedDeltaTime` for time step |  `public override void _PhysicsProcess(double delta)` using `delta` parameter for time step |  |
 | `.zero`  | `.Zero`  |  |
+| `[Range(0, 20)]`  | `[Export(PropertyHint.Range, "0,20,")]`  |  |
 | `.x`  | `.X`  |  |
 | `.y`  | `.Y`  |  |
 | `.z`  | `.Z`  |  |
