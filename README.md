@@ -3,7 +3,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 
 
 # Porting Steps
-| Unity Attribute  | Godot Replacement | Notes |
+| Unity Concept  | Godot Replacement | Notes |
 | ------------- | ------------- | ----- |
 | `.meta` files   | Remove all `.meta` files.  | On MacOS, search for .meta and delete. _TODO: create a script for this_  |
 | `[SerializeField]`  | `[Export]`  |  |
