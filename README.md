@@ -8,8 +8,8 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `.meta` files   | Remove all `.meta` files.  | On MacOS, search for .meta and delete. _TODO: create a script for this_  |
 | `[SerializeField]`  | `[Export]`  |  |
 | Auto serialized public properties | `[Export]`  | Unity auto-synthesizes public vars. Godot does not. Add [Export] to vars you want to serialize. |
-| `void Awake()`  |  `public override _Ready()` |  |
-| `void Start()`  |  _TBD_ | _TODO: what is the equivalent? Custom solution?_ |
+| `void Awake()`  |  No exact equivalent | `_Ready()` is similar, but only called when the object and its children are ready. This doesn't include siblings/parents.  |
+| `void Start()`  |  No exact equivalent |  See notes on `void Awake()` |
 | `void Update()` using `Time.deltaTime` for time step |  `public override void _Process(double delta)` using `delta` parameter for time step |  |
 | `.zero`  | `.Zero`  |  |
 | `.x`  | `.X`  |  |
