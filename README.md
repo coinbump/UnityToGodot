@@ -20,13 +20,14 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `Random.InitState(seed)`  | `GD.Seed(seed)`  | Initialize random number generator seed |
 | `Random.Range(min, max)`  | `GD.Randi() % valueRangeSize + minValue`  | Generate random integer |
 | `Random.value`  | `GD.Randf()`  | Generate random float between 0-1.0f (inclusive) |
-| `.x`  | `.X`  | All vector types |
-| `.y`  | `.Y`  | All vector types |
-| `.up`  | `.Up`  | All vector types |
-| `.down`  | `.Down`  | All vector types |
+| `.x`  | `.X`  | Vector types |
+| `.y`  | `.Y`  | Vector types |
+| `.up`  | `.Up`  | Vector types |
+| `.down`  | `.Down`  | Vector types |
 | `.z`  | `.Z`  | Vector3 |
 | `.forward`  | `.Forward`  | Vector3 |
-| `.normalized`  | `.Normalized`  |  |
+| `.normalized`  | `.Normalized()`  | Vector types |
+| `.magnitude`  | `.Length()`  | Vector types |
 | `GameObject`  | `Node`  | _See Porting Problems section for more information_ |
 | `Vector2Int`  | `Vector2I`  |  |
 | `Vector3Int`  |  `Vector3I` |  |
