@@ -13,7 +13,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `void Update()` using `Time.deltaTime` for time step |  `public override void _Process(double delta)` using `delta` parameter for time step |  |
 | `void FixedUpdate()` using `Time.fixedDeltaTime` for time step |  `public override void _PhysicsProcess(double delta)` using `delta` parameter for time step |  |
 | `.zero`  | `.Zero`  |  |
-| implicit conversion from `Vector3` to `Vector2`  | Not supported |  |
+| implicit conversion between `Vector3` and `Vector2`  | Not supported |  |
 | `[Range(0, 20)]`  | `[Export(PropertyHint.Range, "0,20,")]`  |  |
 | `radians = degrees * Mathf.Deg2Rad`  | `radians = Mathf.DegToRad(degrees)`  |  |
 | `degrees = radians * Mathf.Rad2Deg`  | `degrees = Mathf.RadToDeg(radians)`  |  |
