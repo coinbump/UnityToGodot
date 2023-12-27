@@ -39,11 +39,8 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | n/a  | Godot type name conflicts  | If you have any types in your code that conflict with built in Godot types, use `namespace` to wrap them.  |
 
 # Troubleshooting
-| Problem  | Solutions | Notes |
+| Problem  | Possible Solutions | Notes |
 | ------------- | ------------- | ----- |
-| Trouble with VSCode and Intellisense   | Reinstall .NET SDK | |
-
-- 
-
+| Trouble with VSCode and Intellisense   | ?Reinstall .NET SDK? | _Unverified. Still Investigating_ |
 
 _TODO: Will add more notes as I port more code_
