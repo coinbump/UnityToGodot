@@ -41,6 +41,11 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | n/a  | Godot type name conflicts  | If you have any types in your code that conflict with built in Godot types, use `namespace` to wrap them. |
 | Prefab  | Scene | Documentation: https://docs.godotengine.org/en/3.1/getting_started/editor/unity_to_godot.html#where-are-my-prefabs |
 
+# Godot Limitations
+| Summary | Problem Statement | Solution |
+| ------------- | ------------- | ----- |
+| No visual scene while running | In Unity, you can view a scene visually in the editor. In Godot, you can see the list of nodes in the Scene tree while running in the Remote tab, but you can't view the objects visually in the scene editor. | |
+
 # Porting Problems
 | Summary | Problem Statement | Solution |
 | ------------- | ------------- | ----- |
