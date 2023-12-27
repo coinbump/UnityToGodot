@@ -27,13 +27,13 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `.z`  | `.Z`  | Vector3 |
 | `.forward`  | `.Forward`  | Vector3 |
 | `.normalized`  | `.Normalized`  |  |
-| `GameObject`  | `Node`  |  |
+| `GameObject`  | `Node`  | _See Porting Problems section for more information_ |
 | `Vector2Int`  | `Vector2I`  |  |
 | `Vector3Int`  |  `Vector3I` |  |
-| `using UnityEdtor;`  | _Remove all_  |  |
-| `using UnityEngine.XXX;`  | _Remove all_  |  |
-| `using UnityEngine;`  | `using Godot;`  |  |
-| `Debug.Log`  | `GD.Print`  |  |
+| `using UnityEditor;`  | _Remove all_ |  |
+| `using UnityEngine.XXX;`  | _Remove all_ |  |
+| `using UnityEngine;`  | `using Godot;` |  |
+| `Debug.Log`  | `GD.Print` |  |
 | Unity packages  |  _Remove all_  | Remove installed Unity packages from the `Assets/plugins` folder |
 | n/a  | `partial` class requirement  | Because of the way Godot builds C# code, you'll get a build error for classes that subclass a built-in Godot class and don't use `partial`. Documentation: [Godot Interop With Source Generators](https://godotengine.org/article/whats-new-in-csharp-for-godot-4-0/#engine-interop-with-source-generators) |
 | n/a  | Godot type name conflicts  | If you have any types in your code that conflict with built in Godot types, use `namespace` to wrap them.  |
