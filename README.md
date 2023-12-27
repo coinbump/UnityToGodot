@@ -30,6 +30,8 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `GameObject`  | `Node`  | _See Porting Problems section for more information_ |
 | `Vector2Int`  | `Vector2I`  |  |
 | `Vector3Int`  |  `Vector3I` |  |
+| `transform.childCount`  |  `GetChildCount()` | Get count of children for MonoBehaviour (Unity) vs Node (Godot) |
+| `foreach (Transform childTransform in transform)`  |  `foreach (var child in GetChildren())` | Iterate through children for MonoBehaviour (Unity) vs Node (Godot) |
 | `using UnityEditor;`  | _Remove all_ |  |
 | `using UnityEngine.XXX;`  | _Remove all_ |  |
 | `using UnityEngine;`  | `using Godot;` |  |
