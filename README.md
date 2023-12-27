@@ -20,6 +20,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `Random.InitState(seed)`  | `GD.Seed(seed)`  | Initialize random number generator seed |
 | `Random.Range(min, max)`  | `GD.Randi() % valueRangeSize + minValue`  | Generate random integer |
 | `Random.value`  | `GD.Randf()`  | Generate random float between 0-1.0f (inclusive) |
+| `gameObject.name`  | `node.Name`  | In Godot, the names of sibling nodes must be unique. |
 | `.x`  | `.X`  | Vector types |
 | `.y`  | `.Y`  | Vector types |
 | `.up`  | `.Up`  | Vector types |
