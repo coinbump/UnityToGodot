@@ -41,7 +41,8 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 # Porting Problems
 | Summary | Problem Statement | Solution |
 | ------------- | ------------- | ----- |
-| No transform in Node. | In Unity, every GameObject has a transform. In Godot, Node doesn't have a transform, so you're forced to choose if your code subclasses Node2D or Node3D. | Duplicated code for Node2D vs Node3D 🙁 |
+| No transform in Node | In Unity, every GameObject has a transform. In Godot, Node doesn't have a transform, so you're forced to choose if your code subclasses Node2D or Node3D. | Duplicated code for Node2D vs Node3D 🙁 |
+| Strange scaling for physics sprites | When adding RigidBody2D to a 2D sprite you might see strange scaling when the game is running. | Check all Node2D transforms and make sure they are (1, 1). Documentation: https://stackoverflow.com/questions/77590667/godot-physics-resizing-my-sprites-at-runtime |
 
 # Troubleshooting
 | Problem | Possible Solutions | Notes |
