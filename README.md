@@ -3,7 +3,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 
 
 # Porting Steps
-| Unity Concept  | Godot Replacement | Notes |
+| Unity Concept | Godot Replacement | Notes |
 | ------------- | ------------- | ----- |
 | `.meta` files   | Remove all `.meta` files  | On MacOS, search for .meta and delete. _TODO: create a script for this_  |
 | `[SerializeField]`  | `[Export]`  |  |
@@ -38,8 +38,13 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | n/a  | `partial` class requirement  | Because of the way Godot builds C# code, you'll get a build error for classes that subclass a built-in Godot class and don't use `partial`. Documentation: [Godot Interop With Source Generators](https://godotengine.org/article/whats-new-in-csharp-for-godot-4-0/#engine-interop-with-source-generators) |
 | n/a  | Godot type name conflicts  | If you have any types in your code that conflict with built in Godot types, use `namespace` to wrap them.  |
 
+# Porting Problems
+| Summary | Problem Statement | Solution |
+| ------------- | ------------- | ----- |
+| No transform in Node. | In Unity, every GameObject has a transform. In Godot, Node doesn't have a transform, so you're forced to choose if your code subclasses Node2D or Node3D. This makes creating clean code hierarchies difficult. | Duplicated code for Node2D vs Node3D 🙁 |
+
 # Troubleshooting
-| Problem  | Possible Solutions | Notes |
+| Problem | Possible Solutions | Notes |
 | ------------- | ------------- | ----- |
 | Trouble with VSCode and Intellisense   | ?Reinstall .NET SDK? | _Unverified. Still Investigating_ |
 
