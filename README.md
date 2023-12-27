@@ -39,6 +39,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `using UnityEngine;`  | `using Godot;` |  |
 | `Debug.Log`  | `GD.Print` |  |
 | Input Actions | `InputEvent`/`InputMap` | Godot Documentation: https://docs.godotengine.org/en/stable/tutorials/inputs/inputevent.html |
+| `Rigidbody2D` as child component | `RigidBody2D` as parent node or `CharacterBody2D` as parent node | In Godot, the roles of ownership between a node and its rigidbody are reversed |
 | Unity packages  |  _Remove all_  | Remove installed Unity packages from the `Assets/plugins` folder |
 | n/a  | `partial` class requirement  | Because of the way Godot builds C# code, you'll get a build error for classes that subclass a built-in Godot class and don't use `partial`. Documentation: [Godot Interop With Source Generators](https://godotengine.org/article/whats-new-in-csharp-for-godot-4-0/#engine-interop-with-source-generators) |
 | n/a  | Godot type name conflicts  | If you have any types in your code that conflict with built in Godot types, use `namespace` to wrap them. |
