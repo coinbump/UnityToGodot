@@ -43,7 +43,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | Summary | Problem Statement | Solution |
 | ------------- | ------------- | ----- |
 | Components vs Nodes | In Unity, each `GameObject` can have multiple Components (via `MonoBehaviour`). In Godot, each Node is the component. | Create a separate node for each behavior, instead of a separate component. This requires rethinking logic around finding the target for a particular behavior. Instead of using `gameObject` directly, in Godot you might operate on the parent node, for example. |
-| No transform in Node | In Unity, every GameObject has a transform. In Godot, Node doesn't have a transform, so you're forced to choose if your code subclasses Node2D or Node3D. | Duplicated code for Node2D vs Node3D 🙁 |
+| No transform in Node | In Unity, every GameObject has a transform. In Godot, Node doesn't have a transform, so you're forced to choose if your code subclasses `Node2D` or `Node3D`. | Duplicated code for `Node2D` vs `Node3D` 🙁 |
 | 2D Physics `Sprite2D` not working | After adding `RigidBody2D`, sprite doesn't move or interact with physics. | Sprite must be child node of `RigidBody2D`. This is different than Unity, where the RigidBody component is attached to the GameObject along with the sprite renderer. |
 | Strange scaling for physics sprite | When adding `RigidBody2D` to a `Sprite2D` you might see strange scaling when the game is running. | Check all Node2D transforms in parent nodes of the sprite and make sure they are (1, 1). Documentation: https://stackoverflow.com/questions/77590667/godot-physics-resizing-my-sprites-at-runtime |
 
