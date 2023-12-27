@@ -5,7 +5,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 # Porting Steps
 | Unity Concept  | Godot Replacement | Notes |
 | ------------- | ------------- | ----- |
-| `.meta` files   | Remove all `.meta` files.  | On MacOS, search for .meta and delete. _TODO: create a script for this_  |
+| `.meta` files   | Remove all `.meta` files  | On MacOS, search for .meta and delete. _TODO: create a script for this_  |
 | `[SerializeField]`  | `[Export]`  |  |
 | Auto serialized public fields | `[Export]`  | Unity auto-synthesizes public fields. Godot does not. Add [Export] to fields you want to serialize. |
 | `void Awake()`  |  `public override void _Ready()` | Unity calls `Awake` with random order. Godot calls `_Ready` in order from child to parent to root. |
@@ -13,6 +13,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `void Update()` using `Time.deltaTime` for time step |  `public override void _Process(double delta)` using `delta` parameter for time step |  |
 | `void FixedUpdate()` using `Time.fixedDeltaTime` for time step |  `public override void _PhysicsProcess(double delta)` using `delta` parameter for time step |  |
 | `.zero`  | `.Zero`  |  |
+| implicit conversion from `Vector3` to `Vector2`  | Not supported |  |
 | `[Range(0, 20)]`  | `[Export(PropertyHint.Range, "0,20,")]`  |  |
 | `radians = degrees * Mathf.Deg2Rad`  | `radians = Mathf.DegToRad(degrees)`  |  |
 | `degrees = radians * Mathf.Rad2Deg`  | `degrees = Mathf.RadToDeg(radians)`  |  |
