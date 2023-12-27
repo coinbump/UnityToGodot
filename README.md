@@ -41,7 +41,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 # Porting Problems
 | Summary | Problem Statement | Solution |
 | ------------- | ------------- | ----- |
-| No transform in Node. | In Unity, every GameObject has a transform. In Godot, Node doesn't have a transform, so you're forced to choose if your code subclasses Node2D or Node3D. This makes creating clean code hierarchies difficult. | Duplicated code for Node2D vs Node3D 🙁 |
+| No transform in Node. | In Unity, every GameObject has a transform. In Godot, Node doesn't have a transform, so you're forced to choose if your code subclasses Node2D or Node3D. | Duplicated code for Node2D vs Node3D 🙁 |
 
 # Troubleshooting
 | Problem | Possible Solutions | Notes |
