@@ -78,6 +78,29 @@ for (int i = 0; i < characterBody2D.GetSlideCollisionCount(); i++)
 }
 ```
 
+#### Detect Mouse Click on Node
+- Set the Pickable property to true on your `CharacterBody2D`
+- Make sure your `CharacterBody2D` has a child collision node
+- In the Signals panel for your character body node, connect the input_event to your script
+
+```csharp
+public void _on_character_body_2d_input_event(Node viewport, InputEvent @event, int shape_idx)
+{
+    if (@event is Godot.InputEventMouseButton)
+    {
+        if (@event.IsPressed())
+        {
+            GD.Print("Mouse Press");
+        }
+        else
+        {
+            GD.Print("Mouse Release");
+        }
+    }
+}
+```
+
+
 ## Troubleshooting
 | Problem | Possible Solutions | Notes |
 | ------------- | ------------- | ----- |
