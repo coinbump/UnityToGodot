@@ -33,8 +33,8 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `Vector3Int`  |  `Vector3I` |  |
 | `transform.childCount`  |  `GetChildCount()` | Get count of children for MonoBehaviour (Unity) vs Node (Godot) |
 | `foreach (Transform childTransform in transform)`  |  `foreach (var child in GetChildren())` | Iterate through children for MonoBehaviour (Unity) vs Node (Godot) |
-| `OnTriggerEnter2D`  | _See Godot Code Sample: Detect Collisions_ | |
-| `OnCollisionEnter2D`  | _See Godot Code Sample: Detect Collisions_ | |
+| `OnTriggerEnter2D`  | _See Godot Code Sample: Detect 2D Collisions_ | |
+| `OnCollisionEnter2D`  | _See Godot Code Sample: Detect 2D Collisions_ | |
 | `using UnityEditor;`  | _Remove all_ |  |
 | `using UnityEngine.XXX;`  | _Remove all_ |  |
 | `using UnityEngine;`  | `using Godot;` |  |
@@ -61,7 +61,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 
 ## Code Samples
 ### Godot Code Samples
-#### Detect Collisions
+#### Detect 2D Collisions
 ```csharp
 var collision = characterBody2D.MoveAndCollide(velocity);
 ```
