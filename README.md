@@ -1,8 +1,7 @@
 # UnityToGodot
 This repository is meant to keep track of what needs to be done to port a Unity codebase to Godot. It is a **WORK IN PROGRESS**, and will include my findings and any tools/scripts that are useful in the process.
 
-
-# Porting Steps
+## Porting Steps
 | Unity Concept | Godot Replacement | Notes |
 | ------------- | ------------- | ----- |
 | `.meta` files   | Remove all `.meta` files  | On MacOS, search for .meta and delete. _TODO: create a script for this_  |
@@ -34,6 +33,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `Vector3Int`  |  `Vector3I` |  |
 | `transform.childCount`  |  `GetChildCount()` | Get count of children for MonoBehaviour (Unity) vs Node (Godot) |
 | `foreach (Transform childTransform in transform)`  |  `foreach (var child in GetChildren())` | Iterate through children for MonoBehaviour (Unity) vs Node (Godot) |
+| Detecting Collisions  | _See Godot Code Samples_ | |
 | `using UnityEditor;`  | _Remove all_ |  |
 | `using UnityEngine.XXX;`  | _Remove all_ |  |
 | `using UnityEngine;`  | `using Godot;` |  |
@@ -45,12 +45,12 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | n/a  | Godot type name conflicts  | If you have any types in your code that conflict with built in Godot types, use `namespace` to wrap them. |
 | Prefab  | Scene | Documentation: https://docs.godotengine.org/en/3.1/getting_started/editor/unity_to_godot.html#where-are-my-prefabs |
 
-# Godot Limitations
+## Godot Limitations
 | Summary | Problem Statement | Solution |
 | ------------- | ------------- | ----- |
 | No visual scene while running | In Unity, you can view a scene visually in the editor. In Godot, you can see the list of nodes in the Scene tree while running in the Remote tab, but you can't view the objects visually in the scene editor. | |
 
-# Porting Problems
+## Porting Problems
 | Summary | Problem Statement | Solution |
 | ------------- | ------------- | ----- |
 | Components vs Nodes | In Unity, each `GameObject` can have multiple Components (via `MonoBehaviour`). In Godot, each Node is the component. | Create a separate node for each behavior, instead of a separate component. This requires rethinking logic around finding the target for a particular behavior. Instead of using `gameObject` directly, in Godot you might operate on the parent node, for example. |
@@ -58,7 +58,26 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | 2D Physics `Sprite2D` not working | After adding `RigidBody2D`, sprite doesn't move or interact with physics. | Sprite must be child node of `RigidBody2D`. This is different than Unity, where the RigidBody component is attached to the GameObject along with the sprite renderer. |
 | Strange scaling for physics sprite | When adding `RigidBody2D` to a `Sprite2D` you might see strange scaling when the game is running. | Check all Node2D transforms in parent nodes of the sprite and make sure they are (1, 1). Documentation: https://stackoverflow.com/questions/77590667/godot-physics-resizing-my-sprites-at-runtime |
 
-# Troubleshooting
+## Code Samples
+### Godot Code Samples
+#### Detect Collisions
+```csharp
+var collision = characterBody2D.MoveAndCollide(velocity);
+```
+
+**or**
+
+```csharp
+characterBody2D.Velocity = velocity;
+characterBody2D.MoveAndSlide();
+for (int i = 0; i < characterBody2D.GetSlideCollisionCount(); i++)
+{
+    var slideCollision = characterBody2D.GetSlideCollision(i);
+    GD.Print("Collided with: ", (slideCollision.GetCollider() as Node).Name);
+}
+```
+
+## Troubleshooting
 | Problem | Possible Solutions | Notes |
 | ------------- | ------------- | ----- |
 | Trouble with VSCode and Intellisense   | ?Reinstall .NET SDK? | _Unverified. Still Investigating_ |
