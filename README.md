@@ -31,6 +31,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `GameObject`  | `Node`  | _See Porting Problems section for more information_ |
 | `Vector2Int`  | `Vector2I`  |  |
 | `Vector3Int`  |  `Vector3I` |  |
+| `DestroyObject(gameObject)`  |  `QueueFree()` | Destroy node in scene |
 | `transform.childCount`  |  `GetChildCount()` | Get count of children for MonoBehaviour (Unity) vs Node (Godot) |
 | `foreach (Transform childTransform in transform)`  |  `foreach (var child in GetChildren())` | Iterate through children for MonoBehaviour (Unity) vs Node (Godot) |
 | `OnTriggerEnter2D`  | [Code Sample](https://github.com/coinbump/UnityToGodot/blob/main/README.md#detect-2d-collisions) | |
