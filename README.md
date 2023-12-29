@@ -36,6 +36,8 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `foreach (Transform childTransform in transform)`  |  `foreach (var child in GetChildren())` | Iterate through children for MonoBehaviour (Unity) vs Node (Godot) |
 | `OnTriggerEnter2D`  | [Code Sample](https://github.com/coinbump/UnityToGodot/blob/main/README.md#detect-2d-collisions) | |
 | `OnCollisionEnter2D`  | [Code Sample](https://github.com/coinbump/UnityToGodot/blob/main/README.md#detect-2d-collisions) | |
+| `AudioListener`  | `AudioListener2D`, `AudioListener3D` | |
+| `AudioSource` |`AudioStreamPlayer`, `AudioStreamPlayer2D`, `AudioStreamPlayer3D`  | |
 | `using UnityEditor;`  | _Remove all_ |  |
 | `using UnityEngine.XXX;`  | _Remove all_ |  |
 | `using UnityEngine;`  | `using Godot;` |  |
