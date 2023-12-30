@@ -22,6 +22,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `Color.red`  | `Colors.Red`  | Color constants |
 | `gameObject.name`  | `node.Name`  | In Godot, the names of sibling nodes must be unique from each other. If you change the node name to an existing name it will be automatically renamed (_From in-code documentation_). |
 | `transform.localEulerAngles = new Vector3(0, 0, -newAngle.Degrees)`  | `RotationDegrees = newAngle.Degrees`  | 2D rotation |
+| `rigidbody.isKinematic`  | `physicsBody2D is CharacterBody2D`  | Test: Is kinematic |
 | `.x`  | `.X`  | Vector types |
 | `.y`  | `.Y`  | Vector types |
 | `.up`  | `.Up`  | Vector types |
