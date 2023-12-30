@@ -21,6 +21,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `Random.value`  | `GD.Randf()`  | Generate random float between 0-1.0f (inclusive) |
 | `Color.red`  | `Colors.Red`  | Color constants |
 | `gameObject.name`  | `node.Name`  | In Godot, the names of sibling nodes must be unique from each other. If you change the node name to an existing name it will be automatically renamed (_From in-code documentation_). |
+| `transform.localEulerAngles = new Vector3(0, 0, -newAngle.Degrees)`  | `RotationDegrees = newAngle.Degrees`  | 2D rotation |
 | `.x`  | `.X`  | Vector types |
 | `.y`  | `.Y`  | Vector types |
 | `.up`  | `.Up`  | Vector types |
