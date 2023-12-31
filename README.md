@@ -25,6 +25,8 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `rigidbody.isKinematic`  | `physicsBody2D is CharacterBody2D`  | Test: Is kinematic |
 | `new Vector2(spriteRenderer.size.x, spriteRenderer.size.y)`  | `sprite2D.Texture.GetSize()`  | Get sprite size in pixels |
 | `spriteRenderer.color`  | `sprite2D.Modulate`  | Get sprite modulate color |
+| `spriteRenderer.flipX = true`  | `sprite2D.FlipH = true`  | Flip sprite horizontally |
+| `spriteRenderer.flipY = true`  | `sprite2D.FlipV = true`  | Flip sprite vertically |
 | `.x`  | `.X`  | Vector types |
 | `.y`  | `.Y`  | Vector types |
 | `.up`  | `.Up`  | Vector types |
