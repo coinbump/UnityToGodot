@@ -21,7 +21,6 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `Random.value`  | `GD.Randf()`  | Generate random float between 0-1.0f (inclusive) |
 | `Color.red`  | `Colors.Red`  | Color constants |
 | `gameObject.name`  | `node.Name`  | In Godot, the names of sibling nodes must be unique from each other. If you change the node name to an existing name it will be automatically renamed (_From in-code documentation_). |
-| `transform.localEulerAngles = new Vector3(0, 0, -newAngle.Degrees)`  | `RotationDegrees = newAngle.Degrees`  | 2D rotation |
 | `rigidbody.isKinematic`  | `physicsBody2D is CharacterBody2D`  | Test: Is kinematic |
 | `new Vector2(spriteRenderer.size.x, spriteRenderer.size.y)`  | `sprite2D.Texture.GetSize()`  | Get sprite size in pixels |
 | `spriteRenderer.color`  | `sprite2D.Modulate`  | Get sprite modulate color |
@@ -41,6 +40,8 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `Vector3Int`  |  `Vector3I` |  |
 | `DestroyObject(gameObject)`  |  `QueueFree()` | Destroy node in scene |
 | `transform.childCount`  |  `GetChildCount()` | Get count of children for MonoBehaviour (Unity) vs Node (Godot) |
+| `transform.localEulerAngles = new Vector3(0, 0, -newAngle.Degrees)`  | `RotationDegrees = newAngle.Degrees`  | 2D rotation |
+| `transform.parent`  |  `GetParent()` | Get node parent |
 | `foreach (Transform childTransform in transform)`  |  `foreach (var child in GetChildren())` | Iterate through children for MonoBehaviour (Unity) vs Node (Godot) |
 | `OnTriggerEnter2D`  | [Code Sample](https://github.com/coinbump/UnityToGodot/blob/main/README.md#detect-2d-collisions) | |
 | `OnCollisionEnter2D`  | [Code Sample](https://github.com/coinbump/UnityToGodot/blob/main/README.md#detect-2d-collisions) | |
