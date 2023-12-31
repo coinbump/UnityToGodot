@@ -24,6 +24,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `transform.localEulerAngles = new Vector3(0, 0, -newAngle.Degrees)`  | `RotationDegrees = newAngle.Degrees`  | 2D rotation |
 | `rigidbody.isKinematic`  | `physicsBody2D is CharacterBody2D`  | Test: Is kinematic |
 | `new Vector2(spriteRenderer.size.x, spriteRenderer.size.y)`  | `sprite2D.Texture.GetSize()`  | Get sprite size in pixels |
+| `spriteRenderer.color`  | `sprite2D.Modulate`  | Get sprite modulate color |
 | `.x`  | `.X`  | Vector types |
 | `.y`  | `.Y`  | Vector types |
 | `.up`  | `.Up`  | Vector types |
