@@ -27,6 +27,7 @@ This repository is meant to keep track of what needs to be done to port a Unity 
 | `spriteRenderer.color`  | `sprite2D.Modulate`  | Get sprite modulate color |
 | `spriteRenderer.flipX = true`  | `sprite2D.FlipH = true`  | Flip sprite horizontally |
 | `spriteRenderer.flipY = true`  | `sprite2D.FlipV = true`  | Flip sprite vertically |
+| `[Tooltip("tooltip")]`  | No equivalent  | Not available in C# for Godot. [Documentation](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_documentation_comments.html) (_"Currently only @GDScript has annotations"_) |
 | `.x`  | `.X`  | Vector types |
 | `.y`  | `.Y`  | Vector types |
 | `.up`  | `.Up`  | Vector types |
